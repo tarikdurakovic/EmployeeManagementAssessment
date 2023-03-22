@@ -1,0 +1,23 @@
+﻿<Window x:Class="EmployeeManagementAssessment.EditEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagementAssessment"
+        mc:Ignorable="d"
+        Title="EditEmployee" Height="331" Width="358">
+    <Grid Margin="0,0,10,5">
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="38,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,2.473"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="38,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,2.473"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Margin="38,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,2.473"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="38,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,2.473"/>
+        <TextBox x:Name="emplName" HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="emplEmail" HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="emplGender" HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="emplStatus" HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Submit" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.962,-0.396" Height="29" Width="94" Click="SubmitPatchedEmployee"/>
+        <Label Content="Id:" HorizontalAlignment="Left" Margin="38,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.152,2.473"/>
+        <TextBox x:Name="emplID" HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

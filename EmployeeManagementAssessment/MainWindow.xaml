@@ -1,0 +1,36 @@
+﻿<Window x:Class="EmployeeManagementAssessment.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:EmployeeManagementAssessment"
+    mc:Ignorable="d"
+    Title="EmployeeManagement" Height="450" Width="1350" SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label x:Name="PageLabel" Content="Page:" Height="30" Width="40" RenderTransformOrigin="0.58,0.453"/>
+            <TextBox x:Name="pageTextBox" Text="1" Width="20" Height="20" PreviewTextInput="pageTextBoxPreviewTextInput" PreviewKeyDown="TextBoxPreviewKeyDown"/>
+            <Button x:Name="SubmitPageButton" Content="Submit Page" Margin="10 10 10 10" Click="SubmitPage"/>
+            <Button x:Name="AddEmployeeButton" Content="Add an employee" Margin="10 10 10 10" Click="addEmployee"/>
+            <Button x:Name="EditEmployeeButton" Content="Edit an employee" Margin="10 10 10 10" Click="editEmployee"/>
+            <Button x:Name="DeleteEmployeeButton" Content="Delete an employee" Margin="10 10 10 10" Click="DeleteEmployee"/>
+            <Button x:Name="ExportEmployeeButton" Content="Export employee(s) to CSV" Margin="10 10 10 10" Click="ExportToCSV"/>
+            <Label x:Name="SearchEmployeeLabel" Content="Search employee by:" Height="30" Width="120" RenderTransformOrigin="0.58,0.453"/>
+            <StackPanel x:Name="SearchOptionsPanel" Orientation="Horizontal">
+                <RadioButton x:Name="NameRadioButton" Content="name" Margin="12" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="EmailRadioButton" Content="email" Margin="12" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="GenderRadioButton" Content="gender" Margin="12" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="StatusRadioButton" Content="status" Margin="12" Checked="RadioButton_Checked"/>
+            </StackPanel>
+            <TextBox x:Name="SearchTextBox" Text="" Width="50" Height="20" PreviewKeyDown="SearchTextBoxPreviewKeyDown"/>
+            <Button x:Name="SearchEmployeeButton" Content="Search for an employee" Margin="10 10 10 10" Click="SearchEmployee"/>
+        </StackPanel>
+
+        <DataGrid x:Name="myDataGrid" Grid.Row="1" Margin="10" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </Grid>
+</Window>
